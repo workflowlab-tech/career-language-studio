@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Career Language Studio AI Tools — Speaking Tutor, Interview Practice, Resume Review, Practice Games, and Persona Chat. Coming soon.">
+<title>AI Tools | Career Language Studio</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--navy)}
+.preview{background:white;border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:var(--shadow)}
+.preview-top{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.bubble{padding:14px 16px;border-radius:18px;margin:10px 0;max-width:86%}
+.bubble.ai{background:#edf8f7}
+.bubble.user{background:var(--navy);color:white;margin-left:auto}
+.score-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.score{padding:7px 10px;border-radius:999px;background:#f3f6f8;font-size:12px;font-weight:800}
+
+.tool-card{position:relative;overflow:hidden;min-height:300px;display:flex;flex-direction:column}
+.tool-card:before{content:"";position:absolute;width:140px;height:140px;border-radius:50%;background:rgba(20,184,177,.07);right:-40px;top:-42px}
+.tool-card .btn{margin-top:auto;align-self:flex-start}
+.tool-card .coming-badge{position:absolute;right:18px;top:18px}
+.mini-list{margin:14px 0 0;padding-left:18px}
+.mini-list li{margin:7px 0}
+
+.game-preview{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.quiz-card{background:white;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)}
+.option{display:block;width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:14px;padding:12px 14px;margin:9px 0;font-weight:700}
+.progress{height:9px;background:#e8eef0;border-radius:999px;overflow:hidden;margin:12px 0 20px}
+.progress span{display:block;height:100%;width:60%;background:linear-gradient(90deg,var(--teal),#65d8d2)}
+.persona-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.persona{background:white;border:1px solid var(--line);border-radius:18px;padding:18px;text-align:center}
+.persona strong{display:block;color:var(--navy);margin-top:8px}
+.persona span{font-size:12px;color:var(--muted)}
+.supported{display:flex;gap:9px;flex-wrap:wrap}
+.supported span{padding:9px 12px;border-radius:999px;background:white;border:1px solid var(--line);font-weight:800;color:var(--navy)}
+
+@media(max-width:980px){
+  .hero-grid,.game-preview{grid-template-columns:1fr}
+  .persona-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:680px){
+  .persona-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap nav">
+<a class="brand" href="index.html"><span class="brandmark">CL</span><span>Career Language Studio</span></a>
+<button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+<nav>
+<a href="index.html">Home</a>
+<a href="assessment.html">Assessment</a>
+<a href="ai-tools.html">AI Tools</a>
+<a href="digital-products.html">Digital Products</a>
+<a href="career-hub.html">Career Hub</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<span class="eyebrow">AI Tools</span>
+<span class="coming">COMING SOON</span>
+<h1 style="margin-top:14px">Practice, prepare, and learn with career-focused AI.</h1>
+<p>Career Language Studio is building AI tools for speaking practice, interviews, resume feedback, reading and listening games, and guided conversations with different AI personas.</p>
+<div class="hero-actions">
+<a class="btn primary" href="#tools">Explore AI Tools →</a>
+<a class="btn secondary" href="assessment.html">Take Assessment</a>
+</div>
+<span class="tag">5 focused AI tools · Career + language learning</span>
+</div>
+
+<div class="preview">
+<div class="preview-top"><span class="tag">AI SPEAKING TUTOR · PREVIEW</span><strong>Korean · Workplace</strong></div>
+<div class="bubble ai"><strong>오늘 회의 내용을 간단히 설명해 주세요.</strong><br><span class="muted">Please briefly explain today’s meeting.</span></div>
+<div class="bubble user">오늘 회의에서는 다음 달 계획을 이야기했습니다.</div>
+<div class="bubble ai">Good. Your sentence is clear. Try adding one detail about the plan to sound more complete.</div>
+<div class="score-row"><span class="score">Grammar · Good</span><span class="score">Vocabulary · Good</span><span class="score">Detail · Improve</span></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="tools">
+<div class="wrap">
+<div class="section-head">
+<span class="eyebrow">Five AI tools</span>
+<h2>Each tool has one clear job.</h2>
+<p class="muted">No generic AI chat page. Each tool is designed around a specific learning or career task.</p>
+</div>
+
+<div class="grid cols-3">
+<article class="card tool-card">
+<span class="coming coming-badge">COMING SOON</span>
+<div class="icon">🎤</div>
+<h3>AI Speaking Tutor</h3>
+<p class="muted">Practice realistic conversations and receive feedback on how you communicate.</p>
+<ul class="mini-list">
+<li>Workplace scenarios</li>
+<li>Travel and everyday conversation</li>
+<li>Grammar and vocabulary feedback</li>
+<li>Professional tone suggestions</li>
+</ul>
+<button class="btn secondary" type="button" disabled>Coming soon</button>
+</article>
+
+<article class="card tool-card">
+<span class="coming coming-badge">COMING SOON</span>
+<div class="icon">💼</div>
+<h3>AI Interview Practice</h3>
+<p class="muted">Practice job interviews before the real interview starts.</p>
+<ul class="mini-list">
+<li>HR questions</li>
+<li>Bilingual interviews</li>
+<li>Behavioral questions</li>
+<li>Role-specific practice</li>
+</ul>
+<button class="btn secondary" type="button" disabled>Coming soon</button>
+</article>
+
+<article class="card tool-card">
+<span class="coming coming-badge">COMING SOON</span>
+<div class="icon">📄</div>
+<h3>AI Resume Review</h3>
+<p class="muted">Improve how your experience, achievements, and language skills are presented.</p>
+<ul class="mini-list">
+<li>ATS readability</li>
+<li>Achievement wording</li>
+<li>Language-skill positioning</li>
+<li>Target-role alignment</li>
+</ul>
+<button class="btn secondary" type="button" disabled>Coming soon</button>
+</article>
+
+<article class="card tool-card">
+<span class="coming coming-badge">COMING SOON</span>
+<div class="icon">🎮</div>
+<h3>AI Practice Games</h3>
+<p class="muted">Turn reading and listening practice into short game-like challenges.</p>
+<ul class="mini-list">
+<li>Reading mini-tests</li>
+<li>Listening challenges</li>
+<li>Multiple-choice questions</li>
+<li>Scores, streaks, and explanations</li>
+</ul>
+<a class="btn secondary" href="#games">See game concept →</a>
+</article>
+
+<article class="card tool-card">
+<span class="coming coming-badge">COMING SOON</span>
+<div class="icon">💬</div>
+<h3>AI Persona Chat</h3>
+<p class="muted">Choose how you want the AI to talk to you before you start the conversation.</p>
+<ul class="mini-list">
+<li>Friend</li>
+<li>Career Mentor</li>
+<li>Language Teacher</li>
+<li>Conversation Partner</li>
+<li>Study Coach</li>
+</ul>
+<a class="btn secondary" href="#personas">See personas →</a>
+</article>
+</div>
+</div>
+</section>
+
+<section class="section alt" id="games">
+<div class="wrap game-preview">
+<div>
+<span class="eyebrow">AI Practice Games</span>
+<h2>Reading and listening that feels less like a test.</h2>
+<p class="muted">Users choose a language, difficulty, and practice mode. AI can generate short passages, audio-based tasks, questions, explanations, and progressively harder rounds.</p>
+<div class="supported">
+<span>Korean</span><span>Japanese</span><span>Mandarin</span><span>Spanish</span><span>German</span>
+</div>
+</div>
+
+<div class="quiz-card">
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><span class="tag">READING GAME</span><strong>Level 4</strong></div>
+<div class="progress"><span></span></div>
+<p><strong>읽어 보세요:</strong><br>회의가 오후 3시로 변경되었습니다.</p>
+<p class="muted">What changed?</p>
+<button class="option" type="button" disabled>A. The meeting was cancelled.</button>
+<button class="option" type="button" disabled>B. The meeting moved to 3 PM.</button>
+<button class="option" type="button" disabled>C. The meeting moved to tomorrow.</button>
+<div class="score-row"><span class="score">🔥 Streak 4</span><span class="score">Score 80</span></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="personas">
+<div class="wrap">
+<div class="section-head">
+<span class="eyebrow">AI Persona Chat</span>
+<h2>Choose who you need the AI to be.</h2>
+<p class="muted">The same AI can respond very differently depending on the role the user selects.</p>
+</div>
+
+<div class="persona-grid">
+<div class="persona"><div style="font-size:28px">👭</div><strong>Be My Friend</strong><span>Casual, natural, supportive conversation</span></div>
+<div class="persona"><div style="font-size:28px">💼</div><strong>Career Mentor</strong><span>Professional advice and career guidance</span></div>
+<div class="persona"><div style="font-size:28px">👩‍🏫</div><strong>Language Teacher</strong><span>Corrections, explanations, and practice</span></div>
+<div class="persona"><div style="font-size:28px">🗣️</div><strong>Conversation Partner</strong><span>Keep the conversation going in your target language</span></div>
+<div class="persona"><div style="font-size:28px">📚</div><strong>Study Coach</strong><span>Plan study, quiz you, and keep you focused</span></div>
+</div>
+</div>
+</section>
+
+<section class="section alt">
+<div class="wrap grid cols-2" style="align-items:start">
+<div>
+<span class="eyebrow">How the tools connect</span>
+<h2>Assessment first. AI practice next.</h2>
+<p class="muted">Later, the site can recommend the most useful AI tool based on a user’s assessment result and goal.</p>
+</div>
+<div class="card">
+<p><strong>Example recommendation</strong></p>
+<p>Estimated language level: <strong>Level 5</strong></p>
+<p>Goal: <strong>Korean workplace communication</strong></p>
+<p class="muted">Recommended next tool:</p>
+<div class="tag">AI Speaking Tutor</div>
+<p style="margin-top:12px">Focus on workplace conversation, professional vocabulary, and longer answers.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+<div class="cta">
+<span class="eyebrow" style="color:#75ddd8">Coming Soon</span>
+<h2>Five focused AI tools. One learning and career ecosystem.</h2>
+<p>These tools are currently previews only. No AI functionality is live yet.</p>
+<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px">
+<a class="btn teal" href="assessment.html">Start With Assessment</a>
+<a class="btn secondary" href="digital-products.html">See AutoLearn</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div class="footer-grid">
+<div>
+<div class="brand"><span class="brandmark">CL</span><span style="color:white">Career Language Studio</span></div>
+<p style="margin-top:14px">Master Languages. Advance Your Career.</p>
+</div>
+<div class="footer-col">
+<h3>Platform</h3>
+<a href="index.html">Home</a>
+<a href="assessment.html">Assessment</a>
+<a href="digital-products.html">Digital Products</a>
+<a href="career-hub.html">Career Hub</a>
+</div>
+<div class="footer-col">
+<h3>AI Tools</h3>
+<a href="#tools">All Tools</a>
+<a href="#games">Practice Games</a>
+<a href="#personas">Persona Chat</a>
+</div>
+<div class="footer-col">
+<h3>Company</h3>
+<span class="soon">Contact (coming soon)</span>
+<span class="soon">Privacy Policy (coming soon)</span>
+<span class="soon">Terms (coming soon)</span>
+</div>
+</div>
+<div class="copyright"><span>© 2026 Career Language Studio</span><span>AI Tools · Coming Soon</span></div>
+</div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

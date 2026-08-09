@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Career Language Studio — practical language learning, AI tools, assessments, digital products, and career opportunities for multilingual professionals.">
+  <title>Career Language Studio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--navy)}
+    .checks{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;font-weight:800;color:#53606b}
+    .hero-panel{background:white;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:24px}
+    .panel-top{display:flex;justify-content:space-between;gap:12px;align-items:center}
+    .journey{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+    .journey-card{padding:17px;border:1px solid var(--line);border-radius:17px;background:#fbfdfd}
+    .journey-card strong{display:block;color:var(--navy);font-size:18px}
+    .phrase{margin-top:14px;background:var(--navy);color:white;border-radius:18px;padding:18px}
+    .phrase strong{display:block;font-size:24px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-top:42px}
+    .stat{background:white;padding:22px;text-align:center}
+    .stat strong{display:block;color:var(--navy);font-size:27px}
+    .main-card{position:relative;overflow:hidden;min-height:290px;display:flex;flex-direction:column;transition:.2s}
+    .main-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .main-card:before{content:"";position:absolute;width:140px;height:140px;border-radius:50%;background:rgba(20,184,177,.07);right:-42px;top:-45px}
+    .main-card .btn{margin-top:auto;align-self:flex-start}
+    .main-card .coming-badge{position:absolute;right:18px;top:18px}
+    .path{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .node{background:white;border:1px solid var(--line);border-radius:16px;padding:15px 17px;font-weight:800;color:var(--navy)}
+    .arrow{color:var(--teal);font-weight:900}
+    .ai-preview{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+    .chatbox{background:white;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow)}
+    .bubble{max-width:85%;padding:14px 16px;border-radius:18px;margin:10px 0}
+    .bubble.ai{background:#edf8f7}
+    .bubble.user{background:var(--navy);color:white;margin-left:auto}
+    .score-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+    .score{padding:7px 10px;border-radius:999px;background:#f3f6f8;font-size:12px;font-weight:800}
+    .product-preview{overflow:hidden;padding:0}
+    .cover{min-height:215px;padding:22px;background:linear-gradient(145deg,#12314a,#1c5470);color:white;display:flex;flex-direction:column;justify-content:space-between}
+    .cover h3{color:white;font-size:26px}
+    .product-body{padding:22px}
+    .career-preview{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .career-box{border:1px solid var(--line);border-radius:16px;padding:16px;background:#fbfdfd}
+    .career-box strong{color:var(--navy)}
+    @media(max-width:980px){
+      .hero-grid,.ai-preview{grid-template-columns:1fr}
+      .stats{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:680px){
+      .stats,.journey,.career-preview{grid-template-columns:1fr}
+      .path{display:grid}
+      .arrow{transform:rotate(90deg);justify-self:center}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="brandmark">CL</span><span>Career Language Studio</span></a>
+    <button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="assessment.html">Assessment</a>
+      <a href="ai-tools.html">AI Tools</a>
+      <a href="digital-products.html">Digital Products</a>
+      <a href="career-hub.html">Career Hub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Languages for real careers</span>
+        <h1>Master Languages.<br>Advance Your Career.</h1>
+        <p>Career-focused language learning for people who want practical skills, stronger interviews, better workplace communication, and more multilingual career opportunities.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="assessment.html">Start Assessment →</a>
+          <a class="btn secondary" href="career-hub.html">Explore Career Hub</a>
+        </div>
+        <div class="checks"><span>✓ Career-focused</span><span>✓ Practical scenarios</span><span>✓ Built for working adults</span></div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="panel-top"><span class="tag">YOUR CAREER LANGUAGE JOURNEY</span><span class="pill">Version 1</span></div>
+        <div class="journey">
+          <div class="journey-card"><small>ASSESS</small><strong>Know your level</strong><span class="muted">Reading, listening, career context</span></div>
+          <div class="journey-card"><small>PRACTICE</small><strong>AI Tools</strong><span class="muted">Speaking, interview, resume · Coming soon</span></div>
+          <div class="journey-card"><small>LEARN</small><strong>Digital Products</strong><span class="muted">Focused language kits and career materials</span></div>
+          <div class="journey-card"><small>ADVANCE</small><strong>Career Hub</strong><span class="muted">Explore multilingual career opportunities</span></div>
+        </div>
+        <div class="phrase"><small>WORKPLACE KOREAN</small><strong>확인 부탁드립니다.</strong><span>Please check and confirm.</span></div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><strong>5</strong><span>Focused website pages</span></div>
+      <div class="stat"><strong>5</strong><span>AI tools planned</span></div>
+      <div class="stat"><strong>100%</strong><span>Career focused</span></div>
+      <div class="stat"><strong>1</strong><span>Connected learning ecosystem</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The Career Language Studio</span>
+      <h2>Five pages. One clear path.</h2>
+      <p class="muted">Version 1 stays focused on the tools that define the platform.</p>
+    </div>
+
+    <div class="grid cols-4">
+      <article class="card main-card">
+        <div class="icon">✓</div>
+        <h3>Language Assessment</h3>
+        <p class="muted">Measure practical reading and listening ability and understand where to focus next.</p>
+        <a class="btn secondary" href="assessment.html">Take Assessment →</a>
+      </article>
+
+      <article class="card main-card">
+        <span class="tag coming coming-badge">COMING SOON</span>
+        <div class="icon">✦</div>
+        <h3>AI Tools</h3>
+        <p class="muted">Speaking Tutor, Interview Practice, Resume Review, Practice Games, and Persona Chat.</p>
+        <a class="btn secondary" href="ai-tools.html">Preview AI Tools →</a>
+      </article>
+
+      <article class="card main-card">
+        <span class="tag coming coming-badge">COMING SOON</span>
+        <div class="icon">▤</div>
+        <h3>Digital Products</h3>
+        <p class="muted">Practical language kits, business communication guides, templates, and career-focused learning tools.</p>
+        <a class="btn secondary" href="digital-products.html">Browse Products →</a>
+      </article>
+
+      <article class="card main-card">
+        <div class="icon">💼</div>
+        <h3>Career Hub</h3>
+        <p class="muted">Explore multilingual career paths and sample bilingual opportunities in one focused space.</p>
+        <a class="btn secondary" href="career-hub.html">Open Career Hub →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">How the platform connects</span>
+      <h2>Assess. Practice. Learn. Apply.</h2>
+    </div>
+    <div class="path">
+      <div class="node">01 · Assessment</div><div class="arrow">→</div>
+      <div class="node">02 · AI Tools</div><div class="arrow">→</div>
+      <div class="node">03 · Digital Products</div><div class="arrow">→</div>
+      <div class="node">04 · Career Hub</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap ai-preview">
+    <div class="chatbox">
+      <span class="tag">AI TOOLS · COMING SOON</span>
+      <div class="bubble ai"><strong>결제 일정을 확인해 주시겠어요?</strong><br><span class="muted">Could you confirm the payment schedule?</span></div>
+      <div class="bubble user">네, 확인하고 다시 연락드리겠습니다.</div>
+      <div class="bubble ai">Good response. For a client-facing situation, try adding a more formal closing.</div>
+      <div class="score-row"><span class="score">Pronunciation · Good</span><span class="score">Grammar · Correct</span><span class="score">Tone · Improve</span></div>
+    </div>
+    <div>
+      <span class="eyebrow">AI Tools</span>
+      <h2>Practice before the real conversation starts.</h2>
+      <p class="muted">Version 2 will add AI-powered speaking practice, interview simulation, resume review, practice games, and persona-based conversation coaching.</p>
+      <p>✓ AI Speaking Tutor<br>✓ AI Interview Practice<br>✓ AI Resume Review<br>✓ AI Practice Games<br>✓ AI Persona Chat</p>
+      <a class="btn primary" href="ai-tools.html">Preview AI Tools →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap grid cols-2" style="align-items:center">
+    <div>
+      <span class="eyebrow">Digital Products</span>
+      <h2>Learn the language you actually need.</h2>
+      <p class="muted">AutoLearn helps learners organize professional vocabulary, grammar, and sentences into a private, AI-enriched study workspace.</p>
+      <a class="btn primary" href="digital-products.html">Browse Digital Products →</a>
+    </div>
+    <article class="card product-preview">
+      <div class="cover">
+        <small>CAREER LANGUAGE STUDIO · DIGITAL PRODUCTS</small>
+        <div><span class="tag coming">Coming Soon</span><h3>AutoLearn — AI Study Notes</h3><p>Vocabulary, grammar, and sentence databases enriched automatically with AI.</p></div>
+        <span>Private study workspace</span>
+      </div>
+      <div class="product-body"><h3>AutoLearn</h3><p class="muted">The first specialized career-language product inside the studio.</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid cols-2" style="align-items:center">
+    <div class="career-preview">
+      <div class="career-box"><strong>Korean</strong><br><span class="muted">Accounting · Customer Service · Shared Services</span></div>
+      <div class="career-box"><strong>Japanese</strong><br><span class="muted">IT Service Desk · Finance · Operations</span></div>
+      <div class="career-box"><strong>Spanish</strong><br><span class="muted">Healthcare · Customer Support · Sales</span></div>
+      <div class="career-box"><strong>Mandarin</strong><br><span class="muted">E-commerce · Procurement · Logistics</span></div>
+    </div>
+    <div>
+      <span class="eyebrow">Career Hub</span>
+      <h2>Turn language ability into career direction.</h2>
+      <p class="muted">Explore multilingual roles and understand how language skills connect with real job families and professional responsibilities.</p>
+      <a class="btn primary" href="career-hub.html">Explore Career Hub →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta">
+      <span class="eyebrow" style="color:#75ddd8">Start with one step</span>
+      <h2>Build a career that uses every skill you worked hard to learn.</h2>
+      <p>Start with your language level, then move through the tools that support your next career step.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px">
+        <a class="btn teal" href="assessment.html">Start Assessment</a>
+        <a class="btn secondary" href="career-hub.html">Explore Career Hub</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand"><span class="brandmark">CL</span><span style="color:white">Career Language Studio</span></div>
+        <p style="margin-top:15px">Master Languages. Advance Your Career.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Platform</h3>
+        <a href="index.html">Home</a>
+        <a href="assessment.html">Assessment</a>
+        <a href="ai-tools.html">AI Tools</a>
+        <a href="digital-products.html">Digital Products</a>
+        <a href="career-hub.html">Career Hub</a>
+      </div>
+      <div class="footer-col">
+        <h3>Languages</h3>
+        <a href="assessment.html">Korean</a>
+        <a href="assessment.html">Japanese</a>
+        <a href="assessment.html">Mandarin Chinese</a>
+        <a href="assessment.html">Spanish</a>
+        <a href="assessment.html">German</a>
+      </div>
+      <div class="footer-col">
+        <h3>Company</h3>
+        <span class="soon">Contact (coming soon)</span>
+        <span class="soon">Privacy Policy (coming soon)</span>
+        <span class="soon">Terms (coming soon)</span>
+      </div>
+    </div>
+    <div class="copyright"><span>© 2026 Career Language Studio</span><span>Career-focused language learning for multilingual professionals.</span></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Career Language Studio multilingual assessment for Korean, Japanese, Mandarin Chinese, Spanish, and German.">
+  <title>Language Assessment | Career Language Studio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    :root{ --good:#2e7d64; --warn:#9a6b20; }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--navy)}
+    .profile{background:white;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:24px}
+    .profile-top{display:flex;justify-content:space-between;gap:12px;align-items:center}
+    .language-list{display:flex;gap:9px;flex-wrap:wrap;margin:18px 0}
+    .orb{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#eef5f6;color:var(--navy);font-weight:900}
+    .result-preview{border:1px solid var(--line);border-radius:18px;padding:18px;background:#fbfdfd}
+    .result-preview strong{font-size:30px;color:var(--navy);display:block}
+    .language-card{transition:.2s;cursor:pointer;position:relative}
+    .language-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .language-card.selected{border:2px solid var(--teal);box-shadow:var(--shadow)}
+    .symbol{font-size:30px;font-weight:900;color:var(--navy)}
+    .native{font-weight:800;color:#59646f}
+    .assessment-shell{display:grid;grid-template-columns:.86fr 1.14fr;gap:28px;align-items:start}
+    .steps{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 20px}
+    .step{padding:7px 11px;border-radius:999px;background:#eef4f6;font-size:12px;font-weight:900;color:#58636d}
+    .step.active{background:var(--navy);color:white}
+    .question{display:none}
+    .question.active{display:block}
+    .question h3{margin-bottom:18px}
+    .options{display:grid;gap:10px}
+    .option{border:1px solid var(--line);border-radius:14px;padding:14px 15px;background:white;cursor:pointer;text-align:left;font-weight:700}
+    .option:hover{border-color:var(--teal)}
+    .option.selected{border-color:var(--teal);background:#eefaf9}
+    .progress{height:10px;border-radius:999px;background:#e8eef0;overflow:hidden;margin:14px 0 24px}
+    .progress span{display:block;height:100%;background:linear-gradient(90deg,var(--teal),#60d3ce);width:0}
+    .assessment-actions{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px}
+    .skill-note{padding:16px;border-radius:16px;background:#f7fafb;border:1px solid var(--line)}
+    .results{display:none}
+    .results.show{display:block}
+    .level-card{background:linear-gradient(145deg,var(--navy),#1a536f);color:white;border-radius:26px;padding:28px}
+    .level-card h2{color:white}
+    .level-number{font-size:64px;line-height:1;font-weight:900;margin:8px 0 12px}
+    .result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .result-metric{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:15px}
+    .analysis-box{padding:22px}
+    .good{color:var(--good)}
+    .warn{color:var(--warn)}
+    .disclaimer{background:#fff9e9;border:1px solid #efdfb6;border-radius:16px;padding:16px 18px;font-size:14px;margin-top:22px}
+    @media(max-width:980px){
+      .hero-grid,.assessment-shell{grid-template-columns:1fr}
+    }
+    @media(max-width:680px){
+      .result-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="brandmark">CL</span><span>Career Language Studio</span></a>
+    <button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="assessment.html">Assessment</a>
+      <a href="ai-tools.html">AI Tools</a>
+      <a href="digital-products.html">Digital Products</a>
+      <a href="career-hub.html">Career Hub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Career-focused multilingual assessment</span>
+      <h1>Discover your professional language level.</h1>
+      <p>Choose one of the five priority career languages, complete a short practical assessment, and receive an estimated Berlitz-aligned level plus your strengths and areas to improve.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#choose">Choose Language →</a>
+        <a class="btn secondary" href="#how">How It Works</a>
+      </div>
+      <span class="tag">No login · No email required · Results shown instantly</span>
+    </div>
+
+    <div class="profile">
+      <div class="profile-top"><span class="tag">SAMPLE RESULT</span><strong>Professional Language Profile</strong></div>
+      <div class="language-list"><div class="orb">한</div><div class="orb">日</div><div class="orb">中</div><div class="orb">ES</div><div class="orb">DE</div></div>
+      <div class="result-preview">
+        <small>ESTIMATED BERLITZ-ALIGNED LEVEL</small>
+        <strong>Level 6</strong>
+        <span class="muted">Upper-intermediate professional communication</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="choose">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Step 1 · Choose your language</span>
+      <h2>Which language do you want to assess?</h2>
+      <p class="muted">Version 1 focuses on five foreign languages with strong career relevance.</p>
+    </div>
+
+    <div class="grid cols-3" id="languageCards">
+      <article class="card language-card" data-language="Korean" role="button" tabindex="0" aria-pressed="false"><div class="symbol">한</div><h3>Korean</h3><div class="native">한국어</div><p class="muted">Shared services, finance, customer support, e-commerce.</p></article>
+      <article class="card language-card" data-language="Japanese" role="button" tabindex="0" aria-pressed="false"><div class="symbol">日</div><h3>Japanese</h3><div class="native">日本語</div><p class="muted">IT service desk, finance, manufacturing, operations.</p></article>
+      <article class="card language-card" data-language="Mandarin Chinese" role="button" tabindex="0" aria-pressed="false"><div class="symbol">中</div><h3>Mandarin Chinese</h3><div class="native">中文</div><p class="muted">E-commerce, procurement, logistics, sales.</p></article>
+      <article class="card language-card" data-language="Spanish" role="button" tabindex="0" aria-pressed="false"><div class="symbol">ES</div><h3>Spanish</h3><div class="native">Español</div><p class="muted">Customer service, healthcare support, VA, sales.</p></article>
+      <article class="card language-card" data-language="German" role="button" tabindex="0" aria-pressed="false"><div class="symbol">DE</div><h3>German</h3><div class="native">Deutsch</div><p class="muted">Finance, shared services, customer operations.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Step 2 · Take the assessment</span>
+      <h2>One short assessment. Four practical skill areas.</h2>
+    </div>
+
+    <div class="assessment-shell">
+      <div>
+        <div class="card">
+          <h3 id="selectedLanguageTitle">Choose a language first</h3>
+          <p class="muted">The questions below are a lightweight Version 1 prototype. A future backend can swap in full language-specific question banks.</p>
+          <div class="steps"><span class="step active">Reading</span><span class="step">Listening</span><span class="step">Vocabulary / Grammar</span><span class="step">Workplace</span></div>
+          <div class="skill-note"><strong>Estimated duration:</strong> 8–12 minutes for this prototype.<br><span class="muted">A full production assessment can later expand to 30–40 questions.</span></div>
+        </div>
+      </div>
+
+      <div class="card" id="assessmentCard">
+        <div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><span class="tag" id="questionSkill">Reading</span><span class="muted" id="questionCounter">Question 1 of 8</span></div>
+        <div class="progress"><span id="progressBar"></span></div>
+
+        <div id="questions"></div>
+
+        <div class="assessment-actions">
+          <button class="btn secondary" id="prevBtn" type="button">← Back</button>
+          <button class="btn primary" id="nextBtn" type="button">Next →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section results" id="results">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Step 3 · Your result</span>
+      <h2>Your language profile</h2>
+      <p class="muted">This is an independent educational estimate for study guidance and career preparation.</p>
+    </div>
+
+    <div class="grid cols-2">
+      <div class="level-card">
+        <small id="resultLanguage">LANGUAGE</small>
+        <h2>Estimated Berlitz-aligned level</h2>
+        <div class="level-number" id="levelNumber">5</div>
+        <strong id="levelLabel">Intermediate</strong>
+        <div class="result-grid">
+          <div class="result-metric"><small>READING</small><strong id="readingScore">0%</strong></div>
+          <div class="result-metric"><small>LANGUAGE USE</small><strong id="languageScore">0%</strong></div>
+          <div class="result-metric"><small>WORKPLACE</small><strong id="workplaceScore">0%</strong></div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card analysis-box"><h3 class="good">✓ Strengths</h3><p id="strengthsText" class="muted"></p></div>
+        <div class="card analysis-box"><h3 class="warn">△ Areas to Improve</h3><p id="improveText" class="muted"></p></div>
+        <div class="card analysis-box"><h3>Recommended Next Step</h3><p id="nextStepText" class="muted"></p><a class="btn secondary" href="digital-products.html">Explore Learning Tools →</a></div>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Important:</strong> Career Language Studio is not affiliated with or endorsed by Berlitz. This is an independent educational assessment using a simple Berlitz-aligned level estimate for user-friendly guidance. It is not an official Berlitz test, score, or certification.
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand"><span class="brandmark">CL</span><span style="color:white">Career Language Studio</span></div>
+        <p style="margin-top:15px">Master Languages. Advance Your Career.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Platform</h3>
+        <a href="index.html">Home</a>
+        <a href="ai-tools.html">AI Tools</a>
+        <a href="digital-products.html">Digital Products</a>
+        <a href="career-hub.html">Career Hub</a>
+      </div>
+      <div class="footer-col">
+        <h3>Languages</h3>
+        <a href="#choose">Korean</a>
+        <a href="#choose">Japanese</a>
+        <a href="#choose">Mandarin Chinese</a>
+        <a href="#choose">Spanish</a>
+        <a href="#choose">German</a>
+      </div>
+      <div class="footer-col">
+        <h3>Company</h3>
+        <span class="soon">Contact (coming soon)</span>
+        <span class="soon">Privacy Policy (coming soon)</span>
+        <span class="soon">Terms (coming soon)</span>
+      </div>
+    </div>
+    <div class="copyright"><span>© 2026 Career Language Studio</span><span>Instant results · No login required</span></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+const questionBank = [
+  {skill:"Reading", q:"You receive an email asking you to confirm a deadline. What is the most appropriate first action?", options:["Ignore it until the deadline","Identify the requested date and confirm whether you can meet it","Forward it without reading","Reply only with 'OK'"], answer:1},
+  {skill:"Reading", q:"A workplace notice says a process is 'temporarily suspended.' What does this mean?", options:["It has permanently ended","It is paused for a period of time","It is optional","It is urgent"], answer:1},
+  {skill:"Listening", q:"In a meeting, a colleague says: 'Could you clarify the last point?' What do they want?", options:["A repetition or explanation","A new topic","The meeting to end","A written complaint"], answer:0},
+  {skill:"Listening", q:"A client says they 'haven't received the confirmation yet.' What is the key issue?", options:["They received duplicate confirmations","They are asking to cancel","They are still waiting for confirmation","They want a discount"], answer:2},
+  {skill:"Vocabulary / Grammar", q:"Choose the most professional sentence.", options:["Send me this now.","Could you please send the document when available?","Why didn't you send it?","You forgot the document."], answer:1},
+  {skill:"Vocabulary / Grammar", q:"Which response best shows a clear professional commitment?", options:["Maybe later.","I will check this and update you by 3 PM.","I don't know.","Someone else can do it."], answer:1},
+  {skill:"Workplace", q:"A customer sounds frustrated. What is the best response?", options:["Tell them to calm down","Acknowledge the concern, clarify the issue, and explain the next step","End the conversation","Blame another department"], answer:1},
+  {skill:"Workplace", q:"You discover an error in a report you already sent. What should you do?", options:["Wait and hope no one notices","Send a correction promptly and explain the change clearly","Delete the original message only","Ask a coworker to take responsibility"], answer:1}
+];
+
+let selectedLanguage = "";
+let currentQuestion = 0;
+let answers = Array(questionBank.length).fill(null);
+
+function renderQuestions(){
+  const container=document.getElementById("questions");
+  container.innerHTML="";
+  questionBank.forEach((item,i)=>{
+    const div=document.createElement("div");
+    div.className="question"+(i===currentQuestion?" active":"");
+    div.innerHTML=`<h3>${item.q}</h3><div class="options">${item.options.map((op,j)=>`<button class="option ${answers[i]===j?'selected':''}" type="button" data-index="${i}" data-option="${j}">${String.fromCharCode(65+j)}. ${op}</button>`).join("")}</div>`;
+    container.appendChild(div);
+  });
+  container.querySelectorAll(".option").forEach(btn=>{
+    btn.addEventListener("click",()=>selectOption(Number(btn.dataset.index),Number(btn.dataset.option)));
+  });
+  updateQuestionUI();
+}
+
+function updateQuestionUI(){
+  const item=questionBank[currentQuestion];
+  document.getElementById("questionSkill").textContent=item.skill;
+  document.getElementById("questionCounter").textContent=`Question ${currentQuestion+1} of ${questionBank.length}`;
+  document.getElementById("progressBar").style.width=`${((currentQuestion+1)/questionBank.length)*100}%`;
+  document.getElementById("prevBtn").style.visibility=currentQuestion===0?"hidden":"visible";
+  document.getElementById("nextBtn").textContent=currentQuestion===questionBank.length-1?"View Results →":"Next →";
+  document.querySelectorAll(".step").forEach((s)=>s.classList.toggle("active",s.textContent===item.skill));
+}
+
+function selectOption(i,j){
+  answers[i]=j;
+  renderQuestions();
+}
+
+function nextQuestion(){
+  if(!selectedLanguage){alert("Please choose a language first.");document.getElementById("choose").scrollIntoView({behavior:"smooth"});return;}
+  if(answers[currentQuestion]===null){alert("Please choose an answer before continuing.");return;}
+  if(currentQuestion<questionBank.length-1){currentQuestion++;renderQuestions();}
+  else{showResults();}
+}
+
+function prevQuestion(){if(currentQuestion>0){currentQuestion--;renderQuestions();}}
+
+document.getElementById("nextBtn").addEventListener("click", nextQuestion);
+document.getElementById("prevBtn").addEventListener("click", prevQuestion);
+
+function chooseLanguage(card){
+  document.querySelectorAll(".language-card").forEach(c=>{
+    c.classList.remove("selected");
+    c.setAttribute("aria-pressed","false");
+  });
+  card.classList.add("selected");
+  card.setAttribute("aria-pressed","true");
+  selectedLanguage=card.dataset.language;
+  document.getElementById("selectedLanguageTitle").textContent=selectedLanguage+" Assessment";
+  document.getElementById("how").scrollIntoView({behavior:"smooth"});
+}
+
+document.querySelectorAll(".language-card").forEach(card=>{
+  card.addEventListener("click",()=>chooseLanguage(card));
+  card.addEventListener("keydown",e=>{
+    if(e.key==="Enter"||e.key===" "){
+      e.preventDefault();
+      chooseLanguage(card);
+    }
+  });
+});
+
+function scoreForSkills(skills){
+  const idxs=questionBank.map((q,i)=>skills.includes(q.skill)?i:null).filter(i=>i!==null);
+  const correct=idxs.filter(i=>answers[i]===questionBank[i].answer).length;
+  return Math.round((correct/idxs.length)*100);
+}
+
+function levelFromScore(score){
+  if(score>=95)return [10,"Advanced Professional"];
+  if(score>=90)return [9,"Advanced"];
+  if(score>=84)return [8,"Upper-Advanced"];
+  if(score>=76)return [7,"High Intermediate"];
+  if(score>=68)return [6,"Upper-Intermediate"];
+  if(score>=58)return [5,"Intermediate"];
+  if(score>=48)return [4,"Lower-Intermediate"];
+  if(score>=36)return [3,"Elementary"];
+  if(score>=24)return [2,"Basic"];
+  return [1,"Beginner"];
+}
+
+function showResults(){
+  const totalCorrect=questionBank.filter((q,i)=>answers[i]===q.answer).length;
+  const totalScore=Math.round((totalCorrect/questionBank.length)*100);
+  const [level,label]=levelFromScore(totalScore);
+  const reading=scoreForSkills(["Reading","Listening"]);
+  const language=scoreForSkills(["Vocabulary / Grammar"]);
+  const workplace=scoreForSkills(["Workplace"]);
+
+  document.getElementById("resultLanguage").textContent=selectedLanguage.toUpperCase();
+  document.getElementById("levelNumber").textContent=level;
+  document.getElementById("levelLabel").textContent=label;
+  document.getElementById("readingScore").textContent=reading+"%";
+  document.getElementById("languageScore").textContent=language+"%";
+  document.getElementById("workplaceScore").textContent=workplace+"%";
+
+  const skills=[["reading/listening comprehension",reading],["grammar and professional phrasing",language],["workplace judgment",workplace]];
+  const sorted=[...skills].sort((a,b)=>b[1]-a[1]);
+  document.getElementById("strengthsText").textContent=`Your strongest area in this prototype is ${sorted[0][0]} (${sorted[0][1]}%). You show the best control when interpreting practical workplace meaning and choosing appropriate responses.`;
+  document.getElementById("improveText").textContent=`Your main improvement area is ${sorted[sorted.length-1][0]} (${sorted[sorted.length-1][1]}%). Focus on short daily practice using realistic workplace messages, conversations, and role-specific vocabulary.`;
+  document.getElementById("nextStepText").textContent=`For ${selectedLanguage}, continue with career-focused vocabulary and scenario practice at approximately Berlitz-aligned Level ${level}. Reassess after 2–4 weeks of consistent practice.`;
+
+  document.getElementById("results").classList.add("show");
+  document.getElementById("results").scrollIntoView({behavior:"smooth"});
+}
+
+renderQuestions();
+</script>
+</body>
+</html>
