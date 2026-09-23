@@ -31,6 +31,8 @@
 .source-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .source-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
 .source-card strong{display:block;color:var(--navy);margin-bottom:4px}
+.tag.verified{background:#e3f5ec;color:var(--good)}
+.updated-note{font-size:12px;color:var(--muted);margin-top:10px}
 
 @media(max-width:980px){
   .hero-grid{grid-template-columns:1fr}
@@ -141,66 +143,11 @@
     <div class="section-head">
       <span class="eyebrow">Current structure</span>
       <h2>Featured bilingual job listings</h2>
-      <p class="muted">For this version, job buttons use the original job URL. Referral links can be activated later only when an approved partner provides a tracking link or code. A "Language level: Not specified" tag is shown whenever a listing does not state a formal requirement — we never invent one.</p>
+      <p class="muted">Job buttons link to the original job posting. A "Language level: Not specified" tag is shown whenever a listing does not state a formal requirement — we never invent one. Verified listings are added by a daily automated search that checks legitimate job platforms; nothing is published without a working link back to the original source.</p>
+      <p class="updated-note" id="jobsUpdatedAt"></p>
     </div>
 
-    <div class="grid cols-3" id="jobGrid">
-      <article class="card job"
-        data-title="Korean Accounts Payable Analyst"
-        data-company="Demo Global Services"
-        data-language="Korean"
-        data-category="Accounting / Finance"
-        data-setup="Hybrid"
-        data-location="Metro Manila"
-        data-salary=""
-        data-required-level=""
-        data-source="Demo Listing"
-        data-date=""
-        data-original-url="#"
-        data-referral-url=""
-        data-affiliate-enabled="false">
-        <div class="job-top"><div class="logo">KO</div><span class="tag demo">DEMO LISTING</span></div>
-        <div class="meta"><span class="pill">Korean</span><span class="pill">Accounting / Finance</span><span class="pill">Hybrid</span></div>
-        <h3>Korean Accounts Payable Analyst</h3>
-        <p class="muted"><strong>Demo Global Services</strong></p>
-        <p>📍 Metro Manila<br>💼 Hybrid<br>🎓 Language level: Not specified<br>🔗 Source: Demo Listing</p>
-        <p class="muted">Placeholder only. Replace with a verified current listing before public launch.</p>
-        <div class="job-actions">
-          <a class="btn primary job-link" href="#">View Original Job →</a>
-        </div>
-        <div class="data-box">
-          <code>original_url</code> · <code>required_level</code> · <code>referral_url</code> · <code>affiliate_enabled: false</code>
-        </div>
-      </article>
-
-      <article class="card job"
-        data-title="Japanese IT Service Desk Analyst"
-        data-company="Demo Technology Partner"
-        data-language="Japanese"
-        data-category="IT / Service Desk"
-        data-setup="On-site"
-        data-location="Cebu City"
-        data-salary=""
-        data-required-level="JLPT N3"
-        data-source="Demo Listing"
-        data-date=""
-        data-original-url="#"
-        data-referral-url=""
-        data-affiliate-enabled="false">
-        <div class="job-top"><div class="logo">JP</div><span class="tag demo">DEMO LISTING</span></div>
-        <div class="meta"><span class="pill">Japanese</span><span class="pill">IT / Service Desk</span><span class="pill">On-site</span></div>
-        <h3>Japanese IT Service Desk Analyst</h3>
-        <p class="muted"><strong>Demo Technology Partner</strong></p>
-        <p>📍 Cebu City<br>💼 On-site<br>🎓 Language level: JLPT N3<br>🔗 Source: Demo Listing</p>
-        <p class="muted">Placeholder only. Replace with a verified current listing before public launch.</p>
-        <div class="job-actions">
-          <a class="btn primary job-link" href="#">View Original Job →</a>
-        </div>
-        <div class="data-box">
-          <code>original_url</code> · <code>required_level</code> · <code>referral_url</code> · <code>affiliate_enabled: false</code>
-        </div>
-      </article>
-    </div>
+    <div class="grid cols-3" id="jobGrid"></div>
 
     <div class="empty" id="emptyState">
       <h3>No matching jobs</h3>
@@ -264,84 +211,6 @@
 </footer>
 
 <script src="js/main.js"></script>
-<script>
-function getListingUrl(card){
-  const affiliateEnabled = card.dataset.affiliateEnabled === "true";
-  const originalUrl = card.dataset.originalUrl || "#";
-  const referralUrl = card.dataset.referralUrl || "";
-  if(affiliateEnabled && referralUrl) return referralUrl;
-  return originalUrl;
-}
-
-function configureJobLinks(){
-  document.querySelectorAll(".job").forEach(card=>{
-    const link = card.querySelector(".job-link");
-    const url = getListingUrl(card);
-    link.href = url;
-    if(url === "#"){
-      link.addEventListener("click", e=>{
-        e.preventDefault();
-        alert("Demo listing only. Replace this with a verified original job URL before launch.");
-      });
-    } else {
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-    }
-  });
-}
-
-function filterJobs(){
-  const q = document.getElementById("keyword").value.trim().toLowerCase();
-  const language = document.getElementById("language").value.toLowerCase();
-  const category = document.getElementById("category").value.toLowerCase();
-  const setup = document.getElementById("setup").value.toLowerCase();
-
-  let visible = 0;
-
-  document.querySelectorAll(".job").forEach(card=>{
-    const hay = [
-      card.dataset.title,
-      card.dataset.company,
-      card.dataset.language,
-      card.dataset.category,
-      card.dataset.setup,
-      card.dataset.location,
-      card.dataset.source
-    ].join(" ").toLowerCase();
-
-    const okQ = !q || hay.includes(q);
-    const okL = !language || card.dataset.language.toLowerCase() === language;
-    const okC = !category || card.dataset.category.toLowerCase() === category;
-    const okS = !setup || card.dataset.setup.toLowerCase() === setup;
-    const show = okQ && okL && okC && okS;
-
-    card.style.display = show ? "block" : "none";
-    if(show) visible++;
-  });
-
-  document.getElementById("emptyState").style.display = visible ? "none" : "block";
-}
-
-function quickFilter(language, category, setup){
-  document.getElementById("language").value = language || "";
-  document.getElementById("category").value = category || "";
-  document.getElementById("setup").value = setup || "";
-  document.getElementById("keyword").value = "";
-  filterJobs();
-  document.getElementById("jobs").scrollIntoView({behavior:"smooth"});
-}
-
-document.getElementById("keyword").addEventListener("input", filterJobs);
-document.getElementById("language").addEventListener("change", filterJobs);
-document.getElementById("category").addEventListener("change", filterJobs);
-document.getElementById("setup").addEventListener("change", filterJobs);
-document.getElementById("searchBtn").addEventListener("click", filterJobs);
-document.querySelectorAll(".quick button").forEach(btn=>{
-  btn.addEventListener("click", ()=>quickFilter(btn.dataset.language, btn.dataset.category, btn.dataset.setup));
-});
-
-configureJobLinks();
-filterJobs();
-</script>
+<script src="js/career-hub.js"></script>
 </body>
 </html>
