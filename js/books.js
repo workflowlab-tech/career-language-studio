@@ -18,15 +18,13 @@ function priceLabel(price) {
 }
 
 function bookCardHtml(book) {
-  const editionClass = book.edition === "Official" ? "edition-badge official" : "edition-badge";
   return `
     <article class="card book-card" id="${book.id}">
       <div class="book-cover">${bookCoverInitials(book.title)}</div>
       <h3>${book.title}</h3>
       <div class="resource-meta"><span class="pill">${book.language}</span><span class="pill">${book.level}</span></div>
-      <p class="muted">${book.author ? `By ${book.author}. ` : ""}Sold by ${book.shop} on Shopee PH.</p>
+      ${book.author ? `<p class="muted">By ${book.author}.</p>` : ""}
       <p><strong>Price:</strong> ${priceLabel(book.price)}</p>
-      <span class="${editionClass}">Edition: ${book.edition}</span>
       <a class="btn secondary" href="${book.affiliateUrl || book.originalUrl}" target="_blank" rel="noopener noreferrer sponsored">View on Shopee →</a>
     </article>
   `;
