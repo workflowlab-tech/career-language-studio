@@ -81,7 +81,7 @@ nav a[aria-current="page"]{color:var(--teal2)}
 
 /* Footer (shared across all pages) */
 footer{background:#0b2133;color:#c7d4dc;padding:54px 0 28px}
-.footer-grid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:30px}
+.footer-grid{display:grid;grid-template-columns:1.5fr repeat(2,1fr);gap:30px}
 .footer-col a,.footer-col span.soon{display:block;margin:8px 0}
 .footer-col span.soon{color:#7c8a95;cursor:default}
 .copyright{margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}

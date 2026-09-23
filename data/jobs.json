@@ -150,36 +150,6 @@
       "datePosted": "2026-09-10",
       "originalUrl": "https://jknetwork-jobs.com/en/job-posts/23331",
       "demo": false
-    },
-    {
-      "id": "demo-kr-ap-analyst",
-      "title": "Korean Accounts Payable Analyst",
-      "company": "Demo Global Services",
-      "language": "Korean",
-      "category": "Accounting / Finance",
-      "setup": "Hybrid",
-      "location": "Metro Manila",
-      "salary": "",
-      "requiredLevel": "",
-      "source": "Demo Listing",
-      "datePosted": "",
-      "originalUrl": "#",
-      "demo": true
-    },
-    {
-      "id": "demo-jp-it-service-desk",
-      "title": "Japanese IT Service Desk Analyst",
-      "company": "Demo Technology Partner",
-      "language": "Japanese",
-      "category": "IT / Service Desk",
-      "setup": "On-site",
-      "location": "Cebu City",
-      "salary": "",
-      "requiredLevel": "JLPT N3",
-      "source": "Demo Listing",
-      "datePosted": "",
-      "originalUrl": "#",
-      "demo": true
     }
   ]
 }
