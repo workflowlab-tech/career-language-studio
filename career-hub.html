@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Career Language Studio Career Hub — discover bilingual and foreign-language job opportunities across Korean, Japanese, Mandarin Chinese, Spanish, and German.">
+<meta name="description" content="Career Language Studio Career Hub — discover bilingual and foreign-language job opportunities across Korean and Japanese.">
 <title>Career Hub | Career Language Studio</title>
 <link rel="stylesheet" href="css/style.css">
 <style>
@@ -50,8 +50,7 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="assessment.html">Assessment</a>
-      <a href="ai-tools.html">AI Tools</a>
-      <a href="digital-products.html">Digital Products</a>
+      <a href="resources.html">Resources</a>
       <a href="career-hub.html">Career Hub</a>
     </nav>
   </div>
@@ -64,7 +63,7 @@
       <div>
         <span class="eyebrow">💼 Bilingual & foreign-language jobs</span>
         <h1>Turn your language skills into career opportunities.</h1>
-        <p>Explore bilingual and foreign-language jobs across five priority languages, then continue to the original employer or job platform to view full details and apply.</p>
+        <p>Explore bilingual and foreign-language jobs across Korean and Japanese, then continue to the original employer or job platform to view full details and apply.</p>
         <div class="hero-actions">
           <a class="btn primary" href="#jobs">Browse Jobs →</a>
           <a class="btn secondary" href="assessment.html">Check Your Language Level</a>
@@ -73,13 +72,13 @@
       </div>
 
       <div class="hero-panel">
-        <span class="tag">TOP 5 PRIORITY LANGUAGES</span>
+        <span class="tag">FOCUS LANGUAGES</span>
         <div class="languages">
-          <div class="orb">한</div><div class="orb">日</div><div class="orb">中</div><div class="orb">ES</div><div class="orb">DE</div>
+          <div class="orb">한</div><div class="orb">日</div>
         </div>
         <div class="source-note">
           <strong>Career Hub sources</strong>
-          <p class="muted">Employer career pages, JobStreet, Indeed, J-K Network, LinkedIn, GrabJobs, and other trusted job platforms.</p>
+          <p class="muted">Employer career pages, JobStreet, OnlineJobs.ph, J-K Network, Indeed, and other trusted job platforms.</p>
         </div>
       </div>
     </div>
@@ -96,9 +95,6 @@
             <option value="">All languages</option>
             <option>Korean</option>
             <option>Japanese</option>
-            <option>Mandarin Chinese</option>
-            <option>Spanish</option>
-            <option>German</option>
           </select>
         </div>
         <div class="field">
@@ -106,10 +102,14 @@
           <select id="category">
             <option value="">All categories</option>
             <option>Accounting / Finance</option>
-            <option>IT</option>
+            <option>IT / Service Desk</option>
             <option>Customer Service</option>
+            <option>BPO / Shared Services</option>
             <option>E-commerce</option>
             <option>Operations</option>
+            <option>Admin / VA</option>
+            <option>Translation / Localization</option>
+            <option>Sales / Marketing</option>
             <option>Other</option>
           </select>
         </div>
@@ -128,7 +128,7 @@
       <div class="quick">
         <span class="muted">Quick filters:</span>
         <button type="button" data-language="Korean" data-category="" data-setup="">Korean Jobs</button>
-        <button type="button" data-language="Japanese" data-category="IT" data-setup="">Japanese IT</button>
+        <button type="button" data-language="Japanese" data-category="IT / Service Desk" data-setup="">Japanese IT / Service Desk</button>
         <button type="button" data-language="" data-category="Accounting / Finance" data-setup="">Bilingual Accounting</button>
         <button type="button" data-language="" data-category="" data-setup="Remote">Remote Jobs</button>
       </div>
@@ -141,7 +141,7 @@
     <div class="section-head">
       <span class="eyebrow">Current structure</span>
       <h2>Featured bilingual job listings</h2>
-      <p class="muted">For Version 1, job buttons use the original job URL. Referral links can be activated later only when an approved partner provides a tracking link or code.</p>
+      <p class="muted">For this version, job buttons use the original job URL. Referral links can be activated later only when an approved partner provides a tracking link or code. A "Language level: Not specified" tag is shown whenever a listing does not state a formal requirement — we never invent one.</p>
     </div>
 
     <div class="grid cols-3" id="jobGrid">
@@ -153,6 +153,7 @@
         data-setup="Hybrid"
         data-location="Metro Manila"
         data-salary=""
+        data-required-level=""
         data-source="Demo Listing"
         data-date=""
         data-original-url="#"
@@ -162,13 +163,13 @@
         <div class="meta"><span class="pill">Korean</span><span class="pill">Accounting / Finance</span><span class="pill">Hybrid</span></div>
         <h3>Korean Accounts Payable Analyst</h3>
         <p class="muted"><strong>Demo Global Services</strong></p>
-        <p>📍 Metro Manila<br>💼 Hybrid<br>🔗 Source: Demo Listing</p>
+        <p>📍 Metro Manila<br>💼 Hybrid<br>🎓 Language level: Not specified<br>🔗 Source: Demo Listing</p>
         <p class="muted">Placeholder only. Replace with a verified current listing before public launch.</p>
         <div class="job-actions">
           <a class="btn primary job-link" href="#">View Original Job →</a>
         </div>
         <div class="data-box">
-          <code>original_url</code> · <code>referral_url</code> · <code>affiliate_enabled: false</code>
+          <code>original_url</code> · <code>required_level</code> · <code>referral_url</code> · <code>affiliate_enabled: false</code>
         </div>
       </article>
 
@@ -176,107 +177,27 @@
         data-title="Japanese IT Service Desk Analyst"
         data-company="Demo Technology Partner"
         data-language="Japanese"
-        data-category="IT"
+        data-category="IT / Service Desk"
         data-setup="On-site"
         data-location="Cebu City"
         data-salary=""
+        data-required-level="JLPT N3"
         data-source="Demo Listing"
         data-date=""
         data-original-url="#"
         data-referral-url=""
         data-affiliate-enabled="false">
         <div class="job-top"><div class="logo">JP</div><span class="tag demo">DEMO LISTING</span></div>
-        <div class="meta"><span class="pill">Japanese</span><span class="pill">IT</span><span class="pill">On-site</span></div>
+        <div class="meta"><span class="pill">Japanese</span><span class="pill">IT / Service Desk</span><span class="pill">On-site</span></div>
         <h3>Japanese IT Service Desk Analyst</h3>
         <p class="muted"><strong>Demo Technology Partner</strong></p>
-        <p>📍 Cebu City<br>💼 On-site<br>🔗 Source: Demo Listing</p>
+        <p>📍 Cebu City<br>💼 On-site<br>🎓 Language level: JLPT N3<br>🔗 Source: Demo Listing</p>
         <p class="muted">Placeholder only. Replace with a verified current listing before public launch.</p>
         <div class="job-actions">
           <a class="btn primary job-link" href="#">View Original Job →</a>
         </div>
         <div class="data-box">
-          <code>original_url</code> · <code>referral_url</code> · <code>affiliate_enabled: false</code>
-        </div>
-      </article>
-
-      <article class="card job"
-        data-title="Mandarin E-commerce Support Specialist"
-        data-company="Demo Commerce Platform"
-        data-language="Mandarin Chinese"
-        data-category="E-commerce"
-        data-setup="Remote"
-        data-location="Philippines"
-        data-salary=""
-        data-source="Demo Listing"
-        data-date=""
-        data-original-url="#"
-        data-referral-url=""
-        data-affiliate-enabled="false">
-        <div class="job-top"><div class="logo">中</div><span class="tag demo">DEMO LISTING</span></div>
-        <div class="meta"><span class="pill">Mandarin Chinese</span><span class="pill">E-commerce</span><span class="pill">Remote</span></div>
-        <h3>Mandarin E-commerce Support Specialist</h3>
-        <p class="muted"><strong>Demo Commerce Platform</strong></p>
-        <p>📍 Philippines<br>💼 Remote<br>🔗 Source: Demo Listing</p>
-        <p class="muted">Placeholder only. Replace with a verified current listing before public launch.</p>
-        <div class="job-actions">
-          <a class="btn primary job-link" href="#">View Original Job →</a>
-        </div>
-        <div class="data-box">
-          <code>original_url</code> · <code>referral_url</code> · <code>affiliate_enabled: false</code>
-        </div>
-      </article>
-
-      <article class="card job"
-        data-title="Spanish Customer Support Specialist"
-        data-company="Demo Customer Experience Co."
-        data-language="Spanish"
-        data-category="Customer Service"
-        data-setup="Remote"
-        data-location="Philippines"
-        data-salary=""
-        data-source="Demo Listing"
-        data-date=""
-        data-original-url="#"
-        data-referral-url=""
-        data-affiliate-enabled="false">
-        <div class="job-top"><div class="logo">ES</div><span class="tag demo">DEMO LISTING</span></div>
-        <div class="meta"><span class="pill">Spanish</span><span class="pill">Customer Service</span><span class="pill">Remote</span></div>
-        <h3>Spanish Customer Support Specialist</h3>
-        <p class="muted"><strong>Demo Customer Experience Co.</strong></p>
-        <p>📍 Philippines<br>💼 Remote<br>🔗 Source: Demo Listing</p>
-        <p class="muted">Placeholder only. Replace with a verified current listing before public launch.</p>
-        <div class="job-actions">
-          <a class="btn primary job-link" href="#">View Original Job →</a>
-        </div>
-        <div class="data-box">
-          <code>original_url</code> · <code>referral_url</code> · <code>affiliate_enabled: false</code>
-        </div>
-      </article>
-
-      <article class="card job"
-        data-title="German Finance Operations Associate"
-        data-company="Demo Shared Services Center"
-        data-language="German"
-        data-category="Accounting / Finance"
-        data-setup="Hybrid"
-        data-location="Metro Manila"
-        data-salary=""
-        data-source="Demo Listing"
-        data-date=""
-        data-original-url="#"
-        data-referral-url=""
-        data-affiliate-enabled="false">
-        <div class="job-top"><div class="logo">DE</div><span class="tag demo">DEMO LISTING</span></div>
-        <div class="meta"><span class="pill">German</span><span class="pill">Accounting / Finance</span><span class="pill">Hybrid</span></div>
-        <h3>German Finance Operations Associate</h3>
-        <p class="muted"><strong>Demo Shared Services Center</strong></p>
-        <p>📍 Metro Manila<br>💼 Hybrid<br>🔗 Source: Demo Listing</p>
-        <p class="muted">Placeholder only. Replace with a verified current listing before public launch.</p>
-        <div class="job-actions">
-          <a class="btn primary job-link" href="#">View Original Job →</a>
-        </div>
-        <div class="data-box">
-          <code>original_url</code> · <code>referral_url</code> · <code>affiliate_enabled: false</code>
+          <code>original_url</code> · <code>required_level</code> · <code>referral_url</code> · <code>affiliate_enabled: false</code>
         </div>
       </article>
     </div>
@@ -287,7 +208,7 @@
     </div>
 
     <div class="notice">
-      <strong>Important:</strong> Career Language Studio is an independent educational and job-discovery platform, not a recruitment agency. For Version 1, all verified jobs should link to the original employer or trusted job platform. Do not use affiliate or referral links unless an approved partner provides a valid tracking method.
+      <strong>Important:</strong> Career Language Studio is an independent educational and job-discovery platform, not a recruitment agency. All verified jobs should link to the original employer or trusted job platform. Do not use affiliate or referral links unless an approved partner provides a valid tracking method.
     </div>
   </div>
 </section>
@@ -303,9 +224,8 @@
     <div class="source-grid">
       <div class="source-card"><strong>J-K Network Services</strong><span class="muted">Strong bilingual recruitment focus.</span></div>
       <div class="source-card"><strong>JobStreet</strong><span class="muted">Major Philippines job marketplace.</span></div>
+      <div class="source-card"><strong>OnlineJobs.ph</strong><span class="muted">Philippines-focused remote job marketplace.</span></div>
       <div class="source-card"><strong>Indeed</strong><span class="muted">Large job discovery and publisher ecosystem.</span></div>
-      <div class="source-card"><strong>LinkedIn Jobs</strong><span class="muted">Professional and corporate job discovery.</span></div>
-      <div class="source-card"><strong>GrabJobs</strong><span class="muted">Job discovery and partnership possibilities.</span></div>
       <div class="source-card"><strong>Employer Career Pages</strong><span class="muted">Preferred source when a direct listing is available.</span></div>
       <div class="source-card"><strong>Recruitment Agencies</strong><span class="muted">Use only verified agencies and official listings.</span></div>
       <div class="source-card"><strong>Other Trusted Platforms</strong><span class="muted">Add only after source quality review.</span></div>
@@ -325,8 +245,7 @@
         <h3>Platform</h3>
         <a href="index.html">Home</a>
         <a href="assessment.html">Assessment</a>
-        <a href="ai-tools.html">AI Tools</a>
-        <a href="digital-products.html">Digital Products</a>
+        <a href="resources.html">Resources</a>
       </div>
       <div class="footer-col">
         <h3>Career Hub</h3>

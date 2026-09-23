@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Career Language Studio — practical language learning, AI tools, assessments, digital products, and career opportunities for multilingual professionals.">
+  <meta name="description" content="Career Language Studio — career-focused Korean and Japanese language learning, placement assessment, curated resources, and bilingual career opportunities.">
   <title>Career Language Studio</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
@@ -11,7 +11,7 @@
     .checks{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;font-weight:800;color:#53606b}
     .hero-panel{background:white;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:24px}
     .panel-top{display:flex;justify-content:space-between;gap:12px;align-items:center}
-    .journey{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+    .journey{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
     .journey-card{padding:17px;border:1px solid var(--line);border-radius:17px;background:#fbfdfd}
     .journey-card strong{display:block;color:var(--navy);font-size:18px}
     .phrase{margin-top:14px;background:var(--navy);color:white;border-radius:18px;padding:18px}
@@ -19,34 +19,27 @@
     .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-top:42px}
     .stat{background:white;padding:22px;text-align:center}
     .stat strong{display:block;color:var(--navy);font-size:27px}
-    .main-card{position:relative;overflow:hidden;min-height:290px;display:flex;flex-direction:column;transition:.2s}
+    .main-card{position:relative;overflow:hidden;min-height:280px;display:flex;flex-direction:column;transition:.2s}
     .main-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
     .main-card:before{content:"";position:absolute;width:140px;height:140px;border-radius:50%;background:rgba(20,184,177,.07);right:-42px;top:-45px}
     .main-card .btn{margin-top:auto;align-self:flex-start}
-    .main-card .coming-badge{position:absolute;right:18px;top:18px}
     .path{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
     .node{background:white;border:1px solid var(--line);border-radius:16px;padding:15px 17px;font-weight:800;color:var(--navy)}
     .arrow{color:var(--teal);font-weight:900}
-    .ai-preview{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-    .chatbox{background:white;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow)}
-    .bubble{max-width:85%;padding:14px 16px;border-radius:18px;margin:10px 0}
-    .bubble.ai{background:#edf8f7}
-    .bubble.user{background:var(--navy);color:white;margin-left:auto}
-    .score-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
-    .score{padding:7px 10px;border-radius:999px;background:#f3f6f8;font-size:12px;font-weight:800}
     .product-preview{overflow:hidden;padding:0}
     .cover{min-height:215px;padding:22px;background:linear-gradient(145deg,#12314a,#1c5470);color:white;display:flex;flex-direction:column;justify-content:space-between}
-    .cover h3{color:white;font-size:26px}
+    .cover h3{color:white;font-size:24px}
     .product-body{padding:22px}
     .career-preview{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     .career-box{border:1px solid var(--line);border-radius:16px;padding:16px;background:#fbfdfd}
     .career-box strong{color:var(--navy)}
     @media(max-width:980px){
-      .hero-grid,.ai-preview{grid-template-columns:1fr}
+      .hero-grid{grid-template-columns:1fr}
       .stats{grid-template-columns:repeat(2,1fr)}
+      .journey{grid-template-columns:1fr}
     }
     @media(max-width:680px){
-      .stats,.journey,.career-preview{grid-template-columns:1fr}
+      .stats,.career-preview{grid-template-columns:1fr}
       .path{display:grid}
       .arrow{transform:rotate(90deg);justify-self:center}
     }
@@ -60,8 +53,7 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="assessment.html">Assessment</a>
-      <a href="ai-tools.html">AI Tools</a>
-      <a href="digital-products.html">Digital Products</a>
+      <a href="resources.html">Resources</a>
       <a href="career-hub.html">Career Hub</a>
     </nav>
   </div>
@@ -74,7 +66,7 @@
       <div>
         <span class="eyebrow">Languages for real careers</span>
         <h1>Master Languages.<br>Advance Your Career.</h1>
-        <p>Career-focused language learning for people who want practical skills, stronger interviews, better workplace communication, and more multilingual career opportunities.</p>
+        <p>Career-focused Korean and Japanese language learning for people who want practical skills, stronger interviews, better workplace communication, and more bilingual career opportunities.</p>
         <div class="hero-actions">
           <a class="btn primary" href="assessment.html">Start Assessment →</a>
           <a class="btn secondary" href="career-hub.html">Explore Career Hub</a>
@@ -83,22 +75,21 @@
       </div>
 
       <div class="hero-panel">
-        <div class="panel-top"><span class="tag">YOUR CAREER LANGUAGE JOURNEY</span><span class="pill">Version 1</span></div>
+        <div class="panel-top"><span class="tag">YOUR CAREER LANGUAGE JOURNEY</span><span class="pill">Korean · Japanese</span></div>
         <div class="journey">
-          <div class="journey-card"><small>ASSESS</small><strong>Know your level</strong><span class="muted">Reading, listening, career context</span></div>
-          <div class="journey-card"><small>PRACTICE</small><strong>AI Tools</strong><span class="muted">Speaking, interview, resume · Coming soon</span></div>
-          <div class="journey-card"><small>LEARN</small><strong>Digital Products</strong><span class="muted">Focused language kits and career materials</span></div>
-          <div class="journey-card"><small>ADVANCE</small><strong>Career Hub</strong><span class="muted">Explore multilingual career opportunities</span></div>
+          <div class="journey-card"><small>ASSESS</small><strong>Know your current level</strong><span class="muted">JLPT / TOPIK-oriented placement estimate</span></div>
+          <div class="journey-card"><small>LEARN</small><strong>Use trusted resources</strong><span class="muted">Free materials and career-focused study guides</span></div>
+          <div class="journey-card"><small>ADVANCE</small><strong>Explore opportunities</strong><span class="muted">Jobs and career paths that use your language skills</span></div>
         </div>
         <div class="phrase"><small>WORKPLACE KOREAN</small><strong>확인 부탁드립니다.</strong><span>Please check and confirm.</span></div>
       </div>
     </div>
 
     <div class="stats">
-      <div class="stat"><strong>5</strong><span>Focused website pages</span></div>
-      <div class="stat"><strong>5</strong><span>AI tools planned</span></div>
+      <div class="stat"><strong>2</strong><span>Focus languages: Korean &amp; Japanese</span></div>
+      <div class="stat"><strong>4</strong><span>Focused website pages</span></div>
       <div class="stat"><strong>100%</strong><span>Career focused</span></div>
-      <div class="stat"><strong>1</strong><span>Connected learning ecosystem</span></div>
+      <div class="stat"><strong>1</strong><span>Connected learning-to-career path</span></div>
     </div>
   </div>
 </section>
@@ -107,38 +98,29 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">The Career Language Studio</span>
-      <h2>Five pages. One clear path.</h2>
-      <p class="muted">Version 1 stays focused on the tools that define the platform.</p>
+      <h2>Four pages. One clear path.</h2>
+      <p class="muted">Korean and Japanese, connected directly to real career use.</p>
     </div>
 
-    <div class="grid cols-4">
+    <div class="grid cols-3">
       <article class="card main-card">
         <div class="icon">✓</div>
         <h3>Language Assessment</h3>
-        <p class="muted">Measure practical reading and listening ability and understand where to focus next.</p>
+        <p class="muted">Get an estimated JLPT or TOPIK range and understand where to focus next — not an official exam.</p>
         <a class="btn secondary" href="assessment.html">Take Assessment →</a>
       </article>
 
       <article class="card main-card">
-        <span class="tag coming coming-badge">COMING SOON</span>
-        <div class="icon">✦</div>
-        <h3>AI Tools</h3>
-        <p class="muted">Speaking Tutor, Interview Practice, Resume Review, Practice Games, and Persona Chat.</p>
-        <a class="btn secondary" href="ai-tools.html">Preview AI Tools →</a>
-      </article>
-
-      <article class="card main-card">
-        <span class="tag coming coming-badge">COMING SOON</span>
         <div class="icon">▤</div>
-        <h3>Digital Products</h3>
-        <p class="muted">Practical language kits, business communication guides, templates, and career-focused learning tools.</p>
-        <a class="btn secondary" href="digital-products.html">Browse Products →</a>
+        <h3>Resources</h3>
+        <p class="muted">Free, legitimate learning materials, recommended books, and a career-focused guide for bilingual job seekers.</p>
+        <a class="btn secondary" href="resources.html">Browse Resources →</a>
       </article>
 
       <article class="card main-card">
         <div class="icon">💼</div>
         <h3>Career Hub</h3>
-        <p class="muted">Explore multilingual career paths and sample bilingual opportunities in one focused space.</p>
+        <p class="muted">Explore Korean and Japanese career paths and sample bilingual opportunities in one focused space.</p>
         <a class="btn secondary" href="career-hub.html">Open Career Hub →</a>
       </article>
     </div>
@@ -149,67 +131,45 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">How the platform connects</span>
-      <h2>Assess. Practice. Learn. Apply.</h2>
+      <h2>Assess. Learn. Advance.</h2>
     </div>
     <div class="path">
       <div class="node">01 · Assessment</div><div class="arrow">→</div>
-      <div class="node">02 · AI Tools</div><div class="arrow">→</div>
-      <div class="node">03 · Digital Products</div><div class="arrow">→</div>
-      <div class="node">04 · Career Hub</div>
+      <div class="node">02 · Resources</div><div class="arrow">→</div>
+      <div class="node">03 · Career Hub</div>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="wrap ai-preview">
-    <div class="chatbox">
-      <span class="tag">AI TOOLS · COMING SOON</span>
-      <div class="bubble ai"><strong>결제 일정을 확인해 주시겠어요?</strong><br><span class="muted">Could you confirm the payment schedule?</span></div>
-      <div class="bubble user">네, 확인하고 다시 연락드리겠습니다.</div>
-      <div class="bubble ai">Good response. For a client-facing situation, try adding a more formal closing.</div>
-      <div class="score-row"><span class="score">Pronunciation · Good</span><span class="score">Grammar · Correct</span><span class="score">Tone · Improve</span></div>
-    </div>
+  <div class="wrap grid cols-2" style="align-items:center">
     <div>
-      <span class="eyebrow">AI Tools</span>
-      <h2>Practice before the real conversation starts.</h2>
-      <p class="muted">Version 2 will add AI-powered speaking practice, interview simulation, resume review, practice games, and persona-based conversation coaching.</p>
-      <p>✓ AI Speaking Tutor<br>✓ AI Interview Practice<br>✓ AI Resume Review<br>✓ AI Practice Games<br>✓ AI Persona Chat</p>
-      <a class="btn primary" href="ai-tools.html">Preview AI Tools →</a>
+      <span class="eyebrow">Resources</span>
+      <h2>Learn with the right materials for your goal.</h2>
+      <p class="muted">Free resources from the Japan Foundation, King Sejong Institute, and other legitimate sources — plus recommended books and a career-focused guide for bringing your language skills into the workplace.</p>
+      <a class="btn primary" href="resources.html">Browse Resources →</a>
     </div>
+    <article class="card product-preview">
+      <div class="cover">
+        <small>CAREER LANGUAGE STUDIO · RESOURCES</small>
+        <div><span class="tag" style="background:rgba(255,255,255,.16);color:white">Free + Recommended</span><h3>Free resources, recommended books, and a career guide</h3><p>Korean and Japanese materials chosen for real career use.</p></div>
+        <span>No pirated materials · Official and reputable sources only</span>
+      </div>
+      <div class="product-body"><h3>Start with what's free</h3><p class="muted">Irodori, King Sejong Institute courses, and more — no cost, no login required.</p></div>
+    </article>
   </div>
 </section>
 
 <section class="section alt">
   <div class="wrap grid cols-2" style="align-items:center">
-    <div>
-      <span class="eyebrow">Digital Products</span>
-      <h2>Learn the language you actually need.</h2>
-      <p class="muted">AutoLearn helps learners organize professional vocabulary, grammar, and sentences into a private, AI-enriched study workspace.</p>
-      <a class="btn primary" href="digital-products.html">Browse Digital Products →</a>
-    </div>
-    <article class="card product-preview">
-      <div class="cover">
-        <small>CAREER LANGUAGE STUDIO · DIGITAL PRODUCTS</small>
-        <div><span class="tag coming">Coming Soon</span><h3>AutoLearn — AI Study Notes</h3><p>Vocabulary, grammar, and sentence databases enriched automatically with AI.</p></div>
-        <span>Private study workspace</span>
-      </div>
-      <div class="product-body"><h3>AutoLearn</h3><p class="muted">The first specialized career-language product inside the studio.</p></div>
-    </article>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap grid cols-2" style="align-items:center">
     <div class="career-preview">
       <div class="career-box"><strong>Korean</strong><br><span class="muted">Accounting · Customer Service · Shared Services</span></div>
       <div class="career-box"><strong>Japanese</strong><br><span class="muted">IT Service Desk · Finance · Operations</span></div>
-      <div class="career-box"><strong>Spanish</strong><br><span class="muted">Healthcare · Customer Support · Sales</span></div>
-      <div class="career-box"><strong>Mandarin</strong><br><span class="muted">E-commerce · Procurement · Logistics</span></div>
     </div>
     <div>
       <span class="eyebrow">Career Hub</span>
       <h2>Turn language ability into career direction.</h2>
-      <p class="muted">Explore multilingual roles and understand how language skills connect with real job families and professional responsibilities.</p>
+      <p class="muted">Explore Korean and Japanese roles and understand how language skills connect with real job families and professional responsibilities.</p>
       <a class="btn primary" href="career-hub.html">Explore Career Hub →</a>
     </div>
   </div>
@@ -241,17 +201,13 @@
         <h3>Platform</h3>
         <a href="index.html">Home</a>
         <a href="assessment.html">Assessment</a>
-        <a href="ai-tools.html">AI Tools</a>
-        <a href="digital-products.html">Digital Products</a>
+        <a href="resources.html">Resources</a>
         <a href="career-hub.html">Career Hub</a>
       </div>
       <div class="footer-col">
         <h3>Languages</h3>
         <a href="assessment.html">Korean</a>
         <a href="assessment.html">Japanese</a>
-        <a href="assessment.html">Mandarin Chinese</a>
-        <a href="assessment.html">Spanish</a>
-        <a href="assessment.html">German</a>
       </div>
       <div class="footer-col">
         <h3>Company</h3>
@@ -260,7 +216,7 @@
         <span class="soon">Terms (coming soon)</span>
       </div>
     </div>
-    <div class="copyright"><span>© 2026 Career Language Studio</span><span>Career-focused language learning for multilingual professionals.</span></div>
+    <div class="copyright"><span>© 2026 Career Language Studio</span><span>Career-focused language learning for Korean and Japanese.</span></div>
   </div>
 </footer>
 <script src="js/main.js"></script>
