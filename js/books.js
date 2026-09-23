@@ -17,10 +17,17 @@ function priceLabel(price) {
   return `₱${price}`;
 }
 
+function bookCoverHtml(book) {
+  if (book.image) {
+    return `<img class="book-cover-image" src="${book.image}" alt="${book.title} cover" loading="lazy" onerror="this.outerHTML='<div class=&quot;book-cover&quot;>${bookCoverInitials(book.title)}</div>'">`;
+  }
+  return `<div class="book-cover">${bookCoverInitials(book.title)}</div>`;
+}
+
 function bookCardHtml(book) {
   return `
     <article class="card book-card" id="${book.id}">
-      <div class="book-cover">${bookCoverInitials(book.title)}</div>
+      ${bookCoverHtml(book)}
       <h3>${book.title}</h3>
       <div class="resource-meta"><span class="pill">${book.language}</span><span class="pill">${book.level}</span></div>
       ${book.author ? `<p class="muted">By ${book.author}.</p>` : ""}
