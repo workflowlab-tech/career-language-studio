@@ -404,20 +404,20 @@ const ASSESSMENT_QUESTION_BANK = {
 // ids on resources.html so results can deep-link to the right card.
 const ASSESSMENT_RESOURCE_MAP = {
   Japanese: {
-    "N5": [{ id:"irodori", title:"Irodori Starter (Japan Foundation, free)" }, { id:"minna-1", title:"Minna no Nihongo I" }],
-    "N4": [{ id:"marugoto", title:"Marugoto Elementary (Japan Foundation, free)" }, { id:"minna-2", title:"Minna no Nihongo II" }],
-    "N3": [{ id:"nhk-easy-news", title:"NHK News Web Easy (free)" }, { id:"jlpt-review", title:"JLPT N3 review book" }],
-    "N2": [{ id:"nhk-easy-news", title:"NHK News Web Easy (free)" }, { id:"jlpt-review", title:"JLPT N2 review book" }],
-    "N1": [{ id:"jlpt-review", title:"JLPT N1 review book" }, { id:"nhk-easy-news", title:"NHK News Web Easy (free)" }],
-    "Below N5": [{ id:"irodori", title:"Irodori Starter (Japan Foundation, free)" }, { id:"minna-1", title:"Minna no Nihongo I" }]
+    "N5": [{ id:"irodori", title:"Irodori Starter (Japan Foundation, free)" }, { id:"JPO02", title:"Minna no Nihongo Elementary 1 (official)" }],
+    "N4": [{ id:"marugoto", title:"Marugoto Elementary (Japan Foundation, free)" }, { id:"JPO07", title:"Shin Kanzen Master JLPT N4 Grammar (official)" }],
+    "N3": [{ id:"nhk-world-japanese", title:"NHK World-Japan — Learn Japanese (free)" }, { id:"JPO13", title:"2000 Essential Vocabulary for JLPT N3 (official)" }],
+    "N2": [{ id:"nhk-world-japanese", title:"NHK World-Japan — Learn Japanese (free)" }, { id:"JPO17", title:"2500 Essential Vocabulary for JLPT N2 (official)" }],
+    "N1": [{ id:"JPO20", title:"JLPT N1 Shin Nihongo 500 Mon (official)" }, { id:"nhk-world-japanese", title:"NHK World-Japan — Learn Japanese (free)" }],
+    "Below N5": [{ id:"irodori", title:"Irodori Starter (Japan Foundation, free)" }, { id:"JPO02", title:"Minna no Nihongo Elementary 1 (official)" }]
   },
   Korean: {
-    "TOPIK 1": [{ id:"king-sejong", title:"King Sejong Institute — beginner course (free)" }, { id:"sogang-korean", title:"Sogang Korean 1A" }],
-    "TOPIK 2": [{ id:"ttmik", title:"Talk To Me In Korean — free lessons" }, { id:"sogang-korean", title:"Sogang Korean 1B / 2A" }],
-    "TOPIK 3": [{ id:"topik-guide", title:"TOPIK Guide — free practice materials" }, { id:"korean-grammar-in-use", title:"Korean Grammar in Use — Intermediate" }],
-    "TOPIK 4": [{ id:"topik-guide", title:"TOPIK Guide — free practice materials" }, { id:"topik-review", title:"TOPIK review book" }],
-    "TOPIK 5": [{ id:"topik-review", title:"TOPIK review book" }, { id:"korean-grammar-in-use", title:"Korean Grammar in Use — Advanced" }],
-    "TOPIK 6": [{ id:"topik-review", title:"TOPIK review book" }, { id:"korean-grammar-in-use", title:"Korean Grammar in Use — Advanced" }],
-    "Below TOPIK 1": [{ id:"king-sejong", title:"King Sejong Institute — beginner course (free)" }, { id:"sogang-korean", title:"Sogang Korean 1A" }]
+    "TOPIK 1": [{ id:"king-sejong", title:"King Sejong Institute — beginner course (free)" }, { id:"KRO01", title:"Sejong Korean Textbook, revised (official)" }],
+    "TOPIK 2": [{ id:"ttmik", title:"Talk To Me In Korean — free lessons" }, { id:"KRO02", title:"Sejong Korean Vocabulary and Grammar (official)" }],
+    "TOPIK 3": [{ id:"topik-guide", title:"TOPIK Guide — free practice materials" }, { id:"KRO06", title:"Korean Grammar in Use: Beginning (official)" }],
+    "TOPIK 4": [{ id:"topik-guide", title:"TOPIK Guide — free practice materials" }, { id:"KRO16", title:"Complete TOPIK with One Book by Frequency (official)" }],
+    "TOPIK 5": [{ id:"KRO17", title:"TOPIK II PICK — Reading and Writing (official)" }, { id:"KRO14", title:"TOPIK II Pass Recipe (official)" }],
+    "TOPIK 6": [{ id:"KRO18", title:"TOPIK II: Write Along (official)" }, { id:"KRO15", title:"COOL TOPIK — full skills (official)" }],
+    "Below TOPIK 1": [{ id:"king-sejong", title:"King Sejong Institute — beginner course (free)" }, { id:"KRO01", title:"Sejong Korean Textbook, revised (official)" }]
   }
 };

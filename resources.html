@@ -21,9 +21,11 @@
 .book-card{display:flex;flex-direction:column}
 .book-cover{height:150px;border-radius:16px;background:linear-gradient(145deg,var(--navy),#1a536f);color:#fff;display:flex;align-items:center;justify-content:center;font-family:Poppins,Inter,sans-serif;font-weight:900;font-size:28px;letter-spacing:-.02em;margin-bottom:16px;text-align:center;padding:10px}
 .edition-badge{display:inline-block;font-size:11px;font-weight:800;color:#8b691d;background:#fff5dc;border-radius:999px;padding:5px 10px;margin-top:8px}
+.edition-badge.official{color:var(--good);background:#e3f5ec}
 .book-card .btn{margin-top:14px;align-self:flex-start}
 
 .disclosure{background:#f8fafb;border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-size:13px;color:var(--muted);margin:18px 0 30px}
+.updated-note{font-size:12px;color:var(--muted);margin-top:10px}
 
 .ebook-card{background:linear-gradient(145deg,var(--navy),#1a536f);color:white;border-radius:28px;padding:36px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
 .ebook-card h2,.ebook-card h3{color:white}
@@ -101,14 +103,14 @@
         <a class="btn secondary" href="https://marugoto.jpf.go.jp/en/" target="_blank" rel="noopener noreferrer">Access Resource →</a>
       </article>
 
-      <article class="card resource-card" id="nhk-easy-news">
+      <article class="card resource-card" id="nhk-world-japanese">
         <div class="resource-top"><span class="tag">Japanese</span><span class="free-badge">FREE</span></div>
-        <h3>NHK News Web Easy</h3>
-        <div class="resource-meta"><span class="pill">N4–N2</span><span class="pill">NHK</span></div>
-        <p class="muted">Real Japanese news rewritten in simpler language with furigana readings — ideal reading practice once you're past the basics.</p>
-        <p><strong>Best for:</strong> Intermediate to advanced reading practice</p>
-        <p class="muted"><strong>Source:</strong> NHK</p>
-        <a class="btn secondary" href="https://www3.nhk.or.jp/news/easy/" target="_blank" rel="noopener noreferrer">Access Resource →</a>
+        <h3>NHK World-Japan — Learn Japanese</h3>
+        <div class="resource-meta"><span class="pill">Beginner–Intermediate</span><span class="pill">NHK World</span></div>
+        <p class="muted">Free video-and-text lessons from NHK's international broadcasting service, including a dedicated "Speaking well on the job" workplace-Japanese course. No subscription required — this is the free overseas service, separate from NHK's domestic subscriber-only sites.</p>
+        <p><strong>Best for:</strong> Workplace-focused conversation practice</p>
+        <p class="muted"><strong>Source:</strong> NHK World-Japan</p>
+        <a class="btn secondary" href="https://www3.nhk.or.jp/nhkworld/en/learnjapanese/" target="_blank" rel="noopener noreferrer">Access Resource →</a>
       </article>
 
       <article class="card resource-card" id="tae-kim-grammar">
@@ -213,73 +215,35 @@
       <span class="eyebrow">Recommended Books</span>
       <h2>Structured study materials worth owning.</h2>
       <p class="muted">These are recommended commercial books, not free downloads. Career Language Studio does not host or distribute copies of any commercial textbook.</p>
+      <p class="updated-note" id="booksUpdatedAt"></p>
     </div>
 
     <div class="disclosure">
-      <strong>Affiliate disclosure:</strong> Book links below may become affiliate links (for example, via Shopee) once partner links are added. If you purchase through an affiliate link, Career Language Studio may earn a small commission at no extra cost to you. Edition (Official / Reprint) will always be labeled accurately per listing — a reprint is never presented as an official edition.
+      <strong>Affiliate disclosure:</strong> Book links below are Shopee affiliate links. If you purchase through one, Career Language Studio earns a small commission at no extra cost to you. Every listing was individually verified as a real, currently-live product before being added. Edition (Official / Reprint) is taken directly from each seller's own listing — a reprint is never presented as an official edition.
     </div>
 
-    <div class="grid cols-3">
-      <article class="card book-card" id="minna-1">
-        <div class="book-cover">Minna no<br>Nihongo I</div>
-        <h3>Minna no Nihongo I</h3>
-        <div class="resource-meta"><span class="pill">Japanese</span><span class="pill">N5</span><span class="pill">Core Textbook</span></div>
-        <p class="muted">The standard foundational Japanese textbook used in classrooms worldwide, covering essential grammar and vocabulary.</p>
-        <p><strong>Best for:</strong> Structured beginners following a classroom-style curriculum</p>
-        <span class="edition-badge">Edition: confirm Official / Reprint with seller</span>
-        <a class="btn secondary" href="#" data-affiliate-url="">View Book →</a>
-      </article>
+    <h3 style="margin:32px 0 18px">🇯🇵 Japanese — Official Editions</h3>
+    <div class="grid cols-3" id="japanese-official-books"></div>
 
-      <article class="card book-card" id="minna-2">
-        <div class="book-cover">Minna no<br>Nihongo II</div>
-        <h3>Minna no Nihongo II</h3>
-        <div class="resource-meta"><span class="pill">Japanese</span><span class="pill">N4</span><span class="pill">Core Textbook</span></div>
-        <p class="muted">The direct continuation of Minna no Nihongo I, extending into elementary-to-intermediate grammar and vocabulary.</p>
-        <p><strong>Best for:</strong> Learners continuing past Minna no Nihongo I</p>
-        <span class="edition-badge">Edition: confirm Official / Reprint with seller</span>
-        <a class="btn secondary" href="#" data-affiliate-url="">View Book →</a>
-      </article>
+    <h3 style="margin:44px 0 18px">🇯🇵 Japanese — Reprints</h3>
+    <div class="grid cols-3" id="japanese-reprint-books"></div>
 
-      <article class="card book-card" id="jlpt-review">
-        <div class="book-cover">JLPT<br>Review Series</div>
-        <h3>JLPT Review Book (N5–N2)</h3>
-        <div class="resource-meta"><span class="pill">Japanese</span><span class="pill">N5–N2</span><span class="pill">JLPT Review</span></div>
-        <p class="muted">Level-specific review series covering grammar, vocabulary, reading, and listening for focused JLPT exam preparation.</p>
-        <p><strong>Best for:</strong> Learners preparing specifically for the JLPT</p>
-        <span class="edition-badge">Edition: confirm Official / Reprint with seller</span>
-        <a class="btn secondary" href="#" data-affiliate-url="">View Book →</a>
-      </article>
+    <h3 style="margin:44px 0 18px">🇰🇷 Korean — Official Editions</h3>
+    <div class="grid cols-3" id="korean-official-books"></div>
 
-      <article class="card book-card" id="sogang-korean">
-        <div class="book-cover">Sogang<br>Korean</div>
-        <h3>Sogang Korean (1A–2B)</h3>
-        <div class="resource-meta"><span class="pill">Korean</span><span class="pill">Beginner–Intermediate</span><span class="pill">Core Textbook</span></div>
-        <p class="muted">A well-known university-developed Korean textbook series with a strong focus on practical, everyday communication.</p>
-        <p><strong>Best for:</strong> Structured beginners who want a classroom-style progression</p>
-        <span class="edition-badge">Edition: confirm Official / Reprint with seller</span>
-        <a class="btn secondary" href="#" data-affiliate-url="">View Book →</a>
-      </article>
+    <h3 style="margin:44px 0 18px">🇰🇷 Korean — Reprints</h3>
+    <div class="grid cols-3" id="korean-reprint-books"></div>
+  </div>
+</section>
 
-      <article class="card book-card" id="korean-grammar-in-use">
-        <div class="book-cover">Korean Grammar<br>in Use</div>
-        <h3>Korean Grammar in Use (Beginning–Advanced)</h3>
-        <div class="resource-meta"><span class="pill">Korean</span><span class="pill">All levels</span><span class="pill">Grammar Reference</span></div>
-        <p class="muted">A widely used grammar reference series with clear explanations and natural example sentences for each level.</p>
-        <p><strong>Best for:</strong> Building a strong, reliable grammar foundation</p>
-        <span class="edition-badge">Edition: confirm Official / Reprint with seller</span>
-        <a class="btn secondary" href="#" data-affiliate-url="">View Book →</a>
-      </article>
-
-      <article class="card book-card" id="topik-review">
-        <div class="book-cover">TOPIK<br>Review Book</div>
-        <h3>TOPIK Review Book (Intermediate–Advanced)</h3>
-        <div class="resource-meta"><span class="pill">Korean</span><span class="pill">TOPIK 3–6</span><span class="pill">TOPIK Review</span></div>
-        <p class="muted">A focused review book covering grammar, vocabulary, reading, and listening for intermediate-to-advanced TOPIK preparation.</p>
-        <p><strong>Best for:</strong> Learners preparing specifically for TOPIK II</p>
-        <span class="edition-badge">Edition: confirm Official / Reprint with seller</span>
-        <a class="btn secondary" href="#" data-affiliate-url="">View Book →</a>
-      </article>
+<section class="section" id="tools">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Study Tools</span>
+      <h2>Flashcards, dictionaries, and other daily-use tools.</h2>
+      <p class="muted">General-purpose study tools that work well alongside any textbook or course above.</p>
     </div>
+    <div class="grid cols-3" id="studyToolsGrid"></div>
   </div>
 </section>
 
@@ -316,11 +280,12 @@
 <div class="footer-grid">
 <div><div class="brand"><span class="brandmark">CL</span><span style="color:white">Career Language Studio</span></div><p style="margin-top:14px">Master Languages. Advance Your Career.</p></div>
 <div class="footer-col"><h3>Platform</h3><a href="index.html">Home</a><a href="assessment.html">Assessment</a><a href="career-hub.html">Career Hub</a></div>
-<div class="footer-col"><h3>Resources</h3><a href="#free">Free Resources</a><a href="#books">Recommended Books</a><a href="#ebook">Career eBook</a></div>
+<div class="footer-col"><h3>Resources</h3><a href="#free">Free Resources</a><a href="#books">Recommended Books</a><a href="#tools">Study Tools</a><a href="#ebook">Career eBook</a></div>
 </div>
 <div class="copyright"><span>© 2026 Career Language Studio</span><span>Free resources are always free · Books and the career guide support the platform</span></div>
 </div>
 </footer>
 <script src="js/main.js"></script>
+<script src="js/books.js"></script>
 </body>
 </html>
