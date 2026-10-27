@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-10-27",
   "jobs": [
     {
       "id": "jk-23449",
@@ -44,51 +44,6 @@
       "source": "J-K Network Services",
       "datePosted": "2026-09-15",
       "originalUrl": "https://jknetwork-jobs.com/en/job-posts/23375",
-      "demo": false
-    },
-    {
-      "id": "jk-23345",
-      "title": "Korean General Ledger Accountant",
-      "company": "Shared Services – Healthcare Company (client name undisclosed by agency)",
-      "language": "Korean",
-      "category": "Accounting / Finance",
-      "setup": "On-site",
-      "location": "Taguig City",
-      "salary": "₱120,000 – ₱150,000 / month",
-      "requiredLevel": "",
-      "source": "J-K Network Services",
-      "datePosted": "2026-09-11",
-      "originalUrl": "https://jknetwork-jobs.com/en/job-posts/23345",
-      "demo": false
-    },
-    {
-      "id": "jk-23344",
-      "title": "Korean Sr. General Ledger Accountant",
-      "company": "Shared Services – Healthcare Company (client name undisclosed by agency)",
-      "language": "Korean",
-      "category": "Accounting / Finance",
-      "setup": "Hybrid",
-      "location": "Taguig City",
-      "salary": "₱130,000 – ₱170,000 / month",
-      "requiredLevel": "Open to TOPIK Level 3–6, or a Filipino Korean speaker",
-      "source": "J-K Network Services",
-      "datePosted": "2026-09-11",
-      "originalUrl": "https://jknetwork-jobs.com/en/job-posts/23344",
-      "demo": false
-    },
-    {
-      "id": "jk-23343",
-      "title": "Korean AR (Invoice Processor)",
-      "company": "Shared Services – Multinational Company (client name undisclosed by agency)",
-      "language": "Korean",
-      "category": "Accounting / Finance",
-      "setup": "Hybrid",
-      "location": "Taguig City",
-      "salary": "₱80,000 – ₱100,000 / month",
-      "requiredLevel": "",
-      "source": "J-K Network Services",
-      "datePosted": "2026-09-11",
-      "originalUrl": "https://jknetwork-jobs.com/en/job-posts/23343",
       "demo": false
     }
   ]
